@@ -29,3 +29,5 @@ gem 'twitter-bootstrap-rails'
 gem 'less-rails'
 #Ruby Racer Runtime
 gem 'therubyracer'
+#SmarterCSV for quotes
+gem 'smarter_csv'

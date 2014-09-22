@@ -1,4 +1,4 @@
-<%= form_tag login_index_path do %>
+<%= form_tag root_path do %>
 
   <div class="field">
     <%= label_tag :name %><br>
@@ -9,6 +9,6 @@
     <%= password_field_tag :password %>
   </div>
   <div class="actions">
-    <%= submit_tag "Login" %>
+    <%= submit_tag "Login", class: "btn btn-warning" %>
   </div>
 <% end %>

@@ -36,7 +36,7 @@
 
     <%= javascript_include_tag "application" %>
   </head>
-  <body>
+  <body background="/background.jpg">
 
     <div class="navbar navbar-default navbar-static-top">
       <div class="container">
@@ -50,9 +50,9 @@
           <ul class="nav navbar-nav">
             <% if session[:current_user] %>
               <li><%= link_to "Logged in as #{User.find_by_id(session[:current_user]).name}", "/path1" %></li>
+              <li><%= link_to "Manage Users", "/users"  %></li>
+              <li><%= link_to "Logout", "/logout"  %></li>
             <% end %>
-            <li><%= link_to "Link2", "/path2"  %></li>
-            <li><%= link_to "Logout", "/path3"  %></li>
           </ul>
         </div>
       </div>

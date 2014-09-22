@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root to: 'login#index'
-  get 'login/index'
-  post 'login/index'
+  post '/', to: 'login#index'
+  get 'logout', to: 'login#logout'
   resources :users
 
   # The priority is based upon order of creation: first created -> highest priority.

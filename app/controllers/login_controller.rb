@@ -1,4 +1,5 @@
 class LoginController < ApplicationController
+  skip_before_filter :login
   def index
     @user=User.find_by_name(params[:name])
     if @user
@@ -8,4 +9,10 @@ class LoginController < ApplicationController
       end
     end
   end
+
+  def logout
+    session[:current_user]=nil
+    redirect_to root_path
+  end
+
 end
