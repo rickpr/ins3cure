@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
+
   root to: 'login#index'
   post '/', to: 'login#index'
   get 'logout', to: 'login#logout'
   resources :users
+  get 'proverbs', to: 'proverbs#import'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

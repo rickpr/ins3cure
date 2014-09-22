@@ -65,7 +65,11 @@
           <%= yield %>
         </div>
       </div><!--/row-->
-
+<blockquote><p>
+<% proverb=Proverb.all[srand % Proverb.all.length] %>
+<%=proverb.quote %>
+<footer><%=proverb.author %></footer>
+</p></blockquote>
       <footer>
         <p>&copy; Fdisk 2014</p>
       </footer>

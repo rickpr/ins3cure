@@ -1,0 +1,25 @@
+<%= form_for(@proverb) do |f| %>
+  <% if @proverb.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@proverb.errors.count, "error") %> prohibited this proverb from being saved:</h2>
+
+      <ul>
+      <% @proverb.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :quote %><br>
+    <%= f.text_field :quote %>
+  </div>
+  <div class="field">
+    <%= f.label :author %><br>
+    <%= f.text_field :author %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -37,3 +37,7 @@
   @extend .error;
   background-color: #800;
  }
+
+blockquote {
+  border-left-color: #800;
+}

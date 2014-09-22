@@ -11,7 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140921051616) do
+ActiveRecord::Schema.define(version: 20140922100252) do
+
+  create_table "proverbs", force: true do |t|
+    t.string   "quote"
+    t.string   "author"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "name"
