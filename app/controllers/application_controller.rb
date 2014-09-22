@@ -4,9 +4,11 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_filter :login
   def login
-    if User.find_by_id(session[:current_user])
-    else
-      redirect_to root_path
+    if User.any?
+      if User.find_by_id(session[:current_user])
+      else
+        redirect_to root_path
+      end
     end
   end
 end

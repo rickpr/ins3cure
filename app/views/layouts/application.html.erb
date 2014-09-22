@@ -36,7 +36,7 @@
 
     <%= javascript_include_tag "application" %>
   </head>
-  <body background="/background.jpg">
+  <body>
 
     <div class="navbar navbar-default navbar-static-top">
       <div class="container">
@@ -65,11 +65,13 @@
           <%= yield %>
         </div>
       </div><!--/row-->
-<blockquote><p>
-<% proverb=Proverb.all[srand % Proverb.all.length] %>
-<%=proverb.quote %>
-<footer><%=proverb.author %></footer>
-</p></blockquote>
+<% if Proverb.any? %>
+  <blockquote><p>
+    <% proverb=Proverb.all[srand % Proverb.all.length] %>
+    <%=proverb.quote %>
+  <footer><%=proverb.author %></footer>
+  </p></blockquote>
+<% end %>
       <footer>
         <p>&copy; Fdisk 2014</p>
       </footer>
