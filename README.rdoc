@@ -15,7 +15,7 @@ That's it! It's ready to go.
 
 == Users
 
- When there are no users created, visit /users to make one. So if you deploy it locally it would be http://localhost:3000/users
+When there are no users created, visit /users to make one. So if you deploy it locally it would be http://localhost:3000/users
 
 Add a user and a password. Once you do, you will be sent to the login screen and may now log in. You will then see the option to Manage Users and log out.
 
