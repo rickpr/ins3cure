@@ -1,28 +1,33 @@
-== README
+== ins3cure README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a simple, application wide authentication system. It uses Twitter bootstrap for styling, SHA-256 and a random salt for password storage.
 
-Things you may want to cover:
+This application is designed to run Ruby 2.1.2 and Rails 4.1.5.
 
-* Ruby version
+# Running the Application
 
-* System dependencies
+To get started run the following commands:
 
-* Configuration
+    rake db:migrate
+    rails server
 
-* Database creation
+That's it! It's ready to go.
 
-* Database initialization
+# Users
 
-* How to run the test suite
+  When there are no users created, visit /users to make one. So if you deploy it locally it would be http://localhost:3000/users
 
-* Services (job queues, cache servers, search engines, etc.)
+Add a user and a password. Once you do, you will be sent to the login screen and may now log in. You will then see the option to Manage Users and log out.
 
-* Deployment instructions
+The default behavior is to allow any user that's logged in to visit any page, and to only allow users that are not logged in to visit the login page.
 
-* ...
+# Proverbs
 
+To get the proverbs imported, visit /proverbs. So if you deploy it locally it would be http://localhost:3000/proverbs
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+To change the proverbs, edit the quotes.csv file. It's stuctured as follows:
+
+    quote,author
+    "Your quote here","Author of quote"
+
+You may add as many as you'd like! The default ones are computer security themed.
