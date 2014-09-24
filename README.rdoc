@@ -4,7 +4,7 @@ This is a simple, application wide authentication system. It uses Twitter bootst
 
 This application is designed to run Ruby 2.1.2 and Rails 4.1.5.
 
-# Running the Application
+== Running the Application
 
 To get started run the following commands:
 
@@ -13,15 +13,15 @@ To get started run the following commands:
 
 That's it! It's ready to go.
 
-# Users
+== Users
 
-  When there are no users created, visit /users to make one. So if you deploy it locally it would be http://localhost:3000/users
+ When there are no users created, visit /users to make one. So if you deploy it locally it would be http://localhost:3000/users
 
 Add a user and a password. Once you do, you will be sent to the login screen and may now log in. You will then see the option to Manage Users and log out.
 
 The default behavior is to allow any user that's logged in to visit any page, and to only allow users that are not logged in to visit the login page.
 
-# Proverbs
+== Proverbs
 
 To get the proverbs imported, visit /proverbs. So if you deploy it locally it would be http://localhost:3000/proverbs
 
